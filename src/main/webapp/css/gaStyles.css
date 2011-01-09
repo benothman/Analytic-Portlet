@@ -1,0 +1,35 @@
+/* 
+    Document   : gaStyles
+    Created on : Apr 5, 2010, 1:04:59 AM
+    Author     : Benothman
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.error {
+    font-family: sans-serif;
+    color: #ff0000;
+    font-variant: normal;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.helpHead {
+    
+}
+.helpBody {
+    font-family: sans-serif;
+    color: #9999ff;
+    text-align: left;
+    direction: inherit;
+    text-indent: 2px;
+}

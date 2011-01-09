@@ -1,27 +1,34 @@
 ====
-	Copyright (C) 2010 Nabil BENOTHMAN <nabil.benothman@gmail.com>
-                       Anne Leticia MIKIELA <anne.mikiela@unine.ch>
-    
+
+	Copyright (C) 2010 Red Hat, Inc. All rights reserved
+
     This is free software; you can redistribute it and/or modify it
     under the terms of the GNU Lesser General Public License as
     published by the Free Software Foundation; either version 2.1 of
     the License, or (at your option) any later version.
-    
+
     This software is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
     Lesser General Public License for more details.
-    
+
     You should have received a copy of the GNU Lesser General Public
     License along with this software; if not, write to the Free
     Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
     02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+====
+
+====
+Authors :
+   * Nabil Benothman <nabil.benothman@gmail.com>
+   * Anne Leticia MIKIELA <anne.mikiela@unine.ch>
 ====
 
 
 Welcome on GateIn Analytic Portal
 
-This poject tends to provide an analytic portal based on Google Analytics,
+This project tends to provide an analytic portal based on Google Analytics,
 and is a maven project. This project was built using Java 6 but compatible
 Java 5. To install, deploy and run the project please follow steps below :
 
@@ -60,7 +67,7 @@ Java 5. To install, deploy and run the project please follow steps below :
    can deploy on your GateIn portal server.
    
 4) To register the portlet, please refer to GateIn tutorial. Note that it is
-   recommanded to add the portlet to application layout and not to a specific
+   recommended to add the portlet to application layout and not to a specific
    page, otherwise only the that page will be tracked.
    
 5) After registering and adding the portlet, you should have a valid Google
@@ -70,7 +77,7 @@ Java 5. To install, deploy and run the project please follow steps below :
 6) Once you have all the ingredients, logon as administrator and open the portlet
    in edit mode, enter your track ID, choose your options and click on save button.
    
-7) Now it ready to work !
+7) Now it is ready to work !
 
 
 

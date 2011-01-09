@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app xmlns='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd              http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd' version='2.0'>
+    <portlet>
+        <description>
+            Google Analytics Portlet is a useful portlet which allows you to track user and groups for your portal.
+            Users can be authenticated or not, simple users or administrators etc.
+            This portlet allows you also to track used languages according to user preferences.
+        </description>
+        <portlet-name>GoogleAnalyticsPortlet</portlet-name>
+        <display-name>Google Analytics Portlet</display-name>
+        <portlet-class>org.jboss.gatein.analyticportal.GAPortlet</portlet-class>
+        
+        <init-param>
+            <name>jspDir</name>
+            <value>/jsp/</value>
+        </init-param>
+        <init-param>
+            <name>ViewPage</name>
+            <value>/jsp/gaView.jsp</value>
+        </init-param>
+        <init-param>
+            <name>EditPage</name>
+            <value>/jsp/gaEdit.jsp</value>
+        </init-param>
+        <init-param>
+            <name>HelpPage</name>
+            <value>/jsp/gaHelp.jsp</value>
+        </init-param>
+        <init-param>
+            <name>ErrorPage</name>
+            <value>/jsp/error.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>help</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Google Analytics Portlet</title>
+        </portlet-info>
+    </portlet>
+</portlet-app>
