@@ -1,0 +1,77 @@
+====
+	Copyright (C) 2010 Nabil BENOTHMAN <nabil.benothman@gmail.com>
+                       Anne Leticia MIKIELA <anne.mikiela@unine.ch>
+    
+    This is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 2.1 of
+    the License, or (at your option) any later version.
+    
+    This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+    
+    You should have received a copy of the GNU Lesser General Public
+    License along with this software; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+====
+
+
+Welcome on GateIn Analytic Portal
+
+This poject tends to provide an analytic portal based on Google Analytics,
+and is a maven project. This project was built using Java 6 but compatible
+Java 5. To install, deploy and run the project please follow steps below :
+
+
+1) If you don't have maven installed yet, so start with downloading and install
+   it, you find all steps for that in the link below, to ensure that it was 
+   correctly installed, open a terminal window and type the following command :
+   
+   ~home$ mvn --version
+   
+   and you should have something like this (run on Mac OSX) :
+   
+      Apache Maven 2.2.0 (r788681; 2009-06-26 15:04:01+0200)
+      Java version: 1.6.0_20
+      Java home: /System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
+      Default locale: en_US, platform encoding: MacRoman
+      OS name: "mac os x" version: "10.6.4" arch: "x86_64" Family: "mac"
+   
+   
+   
+   NB : if you are using Windows OS, please refer to Maven website for more
+        details about how to install and configure Maven.
+   
+   Download link : http://maven.apache.org/
+
+2) Once installed and configured, open a terminal window and go to the project
+   install directory. Type the command below :
+   
+   	~projectHome$ mvn clean install
+   
+   this should take a while until maven resolve all dependencies and downloads
+   needed libraries, note that this is only for the first build because maven
+   install libs locally.
+
+3) Once built, you should have a war file under directory "target" which you
+   can deploy on your GateIn portal server.
+   
+4) To register the portlet, please refer to GateIn tutorial. Note that it is
+   recommanded to add the portlet to application layout and not to a specific
+   page, otherwise only the that page will be tracked.
+   
+5) After registering and adding the portlet, you should have a valid Google
+   Analytics account where you can register you domain to get a Track ID which
+   you will use to track your application.
+   
+6) Once you have all the ingredients, logon as administrator and open the portlet
+   in edit mode, enter your track ID, choose your options and click on save button.
+   
+7) Now it ready to work !
+
+
+
+Thank you for using Google Analytics Portal !!
