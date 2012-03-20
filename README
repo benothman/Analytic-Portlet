@@ -41,12 +41,12 @@ Java 5. To install, deploy and run the project please follow steps below :
    
    and you should have something like this (run on Mac OSX) :
    
-      Apache Maven 2.2.0 (r788681; 2009-06-26 15:04:01+0200)
-      Java version: 1.6.0_20
-      Java home: /System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
-      Default locale: en_US, platform encoding: MacRoman
-      OS name: "mac os x" version: "10.6.4" arch: "x86_64" Family: "mac"
-   
+	Apache Maven 3.0.3 (r1075438; 2011-02-28 18:31:09+0100)
+	Maven home: /usr/share/maven
+	Java version: 1.6.0_29, vendor: Apple Inc.
+	Java home: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "mac os x", version: "10.7.3", arch: "amd64", family: "mac"
    
    
    NB : if you are using Windows OS, please refer to Maven website for more
