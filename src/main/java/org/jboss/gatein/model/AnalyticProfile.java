@@ -61,6 +61,8 @@ public class AnalyticProfile implements Serializable {
      *
      * @param trackId The track id for the Google analytics account
      * @param groups The list of groups
+     * @param lang
+     * @param auth  
      */
     public AnalyticProfile(String trackId, List<String> groups, boolean lang, boolean auth) {
         this.trackId = trackId;

@@ -124,6 +124,9 @@ public class GAPortlet extends GenericPortlet {
     public void processAction(ActionRequest request, ActionResponse response) throws PortletException, IOException {
 
         String trackId = request.getParameter("trackId");
+        if(trackId != null) {
+            trackId = trackId.trim();
+        }
         String lang = request.getParameter("language");
         String auth = request.getParameter("authenticated");
         String groups[] = request.getParameterValues("groups");
