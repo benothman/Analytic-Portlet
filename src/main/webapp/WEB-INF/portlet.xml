@@ -4,7 +4,7 @@
         <description>
             Google Analytics Portlet is a useful portlet which allows you to track user and groups for your portal.
             Users can be authenticated or not, simple users or administrators etc.
-            This portlet allows you also to track used languages according to user preferences.
+            This portlet allows you also to track used languages according to the user preferences.
         </description>
         <portlet-name>GoogleAnalyticsPortlet</portlet-name>
         <display-name>Google Analytics Portlet</display-name>

@@ -34,18 +34,18 @@
 <portlet:defineObjects/>
 
 <%
-            PortletPreferences prefs = renderRequest.getPreferences();
-            String trackId = prefs.getValue("trackId", "");
-            String auth = prefs.getValue("trackAuth", "");
-            String lang = prefs.getValue("trackLang", "");
-            String error = portletSession.getAttribute("error") != null ? (String) portletSession.getAttribute("error") : "";
-            String message = portletSession.getAttribute("message") != null ? (String) portletSession.getAttribute("message") : "";
+    PortletPreferences prefs = renderRequest.getPreferences();
+    String trackId = prefs.getValue("trackId", "");
+    String auth = prefs.getValue("trackAuth", "");
+    String lang = prefs.getValue("trackLang", "");
+    String error = portletSession.getAttribute("error") != null ? (String) portletSession.getAttribute("error") : "";
+    String message = portletSession.getAttribute("message") != null ? (String) portletSession.getAttribute("message") : "";
 
-            String prefGroups[] = prefs.getValues("groups", new String[]{});
-            List<String> list = new ArrayList<String>();
-            for (String e : prefGroups) {
-                list.add(e);
-            }
+    String prefGroups[] = prefs.getValues("groups", new String[]{});
+    List<String> list = new ArrayList<String>();
+    for (String e : prefGroups) {
+        list.add(e);
+    }
 %>
 
 <div class="portlet-section-header">
@@ -88,19 +88,19 @@
                     <select name="groups" multiple="multiple" size=6>
 
                         <%
-                                    ExoContainer container = ExoContainerContext.getContainerByName("portal");
-                                    OrganizationService orgService = (OrganizationService) container.getComponentInstanceOfType(OrganizationService.class);
-                                    java.util.Collection<Group> groups = orgService.getGroupHandler().getAllGroups();
+                            ExoContainer container = ExoContainerContext.getContainerByName("portal");
+                            OrganizationService orgService = (OrganizationService) container.getComponentInstanceOfType(OrganizationService.class);
+                            java.util.Collection<Group> groups = orgService.getGroupHandler().getAllGroups();
 
-                                    for (Group o : groups) {
-                                        // A group having a null parent id means that it is a root group
-                                        // we are interested only to root groups other than platform
-                                        if (o.getParentId() == null && !o.getGroupName().equals("platform")) {
+                            for (Group o : groups) {
+                                // A group having a null parent id means that it is a root group
+                                // we are interested only to root groups other than platform
+                                if (o.getParentId() == null && !o.getGroupName().equals("platform")) {
                         %>
                         <option value="<%=o.getGroupName()%>" <%= list.contains(o.getGroupName()) ? "SELECTED" : ""%>><%=o.getLabel()%></option>
                         <%
-                                        }
-                                    }
+                                }
+                            }
 
 
                         %>

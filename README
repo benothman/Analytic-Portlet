@@ -63,22 +63,20 @@ Java 5. To install, deploy and run the project please follow steps below :
    needed libraries, note that this is only for the first build because maven
    install libs locally.
 
-3) Once built, you should have a war file under directory "target" which you
+3) Once built, you should have a war file under directory "target" that you
    can deploy on your GateIn portal server.
    
 4) To register the portlet, please refer to GateIn tutorial. Note that it is
    recommended to add the portlet to application layout and not to a specific
-   page, otherwise only the that page will be tracked.
+   page, otherwise only that page will be tracked.
    
 5) After registering and adding the portlet, you should have a valid Google
-   Analytics account where you can register you domain to get a Track ID which
-   you will use to track your application.
+   Analytics account where you can register you domain to get a Track ID that
+   you will use for tracking your application.
    
 6) Once you have all the ingredients, logon as administrator and open the portlet
-   in edit mode, enter your track ID, choose your options and click on save button.
+   in edit mode, enter your track ID, select your options and click on save button.
    
 7) Now it is ready to work !
 
 
-
-Thank you for using Google Analytics Portal !!

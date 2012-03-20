@@ -32,11 +32,13 @@ import org.hibernate.validator.constraints.NotEmpty;
  * Created on Apr 30, 2010, 1:52:22 PM
  *
  *
- * @author Nabil Benothman (nabil.benothman@gmail.com) & Anne Leticia Mikiela (anne.mikiela@unine.ch)
+ * @author <a href="mailto:nabil.benothman@gmail.com">Nabil Benothman</a>
+ * @author <a href="mailto:anne.mikiela@unine.ch">Anne Leticia Mikiela</a>
  * @version 1.0
  */
 public class AnalyticProfile implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @NotNull
     @NotEmpty
     @Length(min = 9, max = 15, message = "Track ID length must be between 9 and 15")
@@ -55,9 +57,8 @@ public class AnalyticProfile implements Serializable {
     }
 
     /**
-     * Create a new instance of {@code AnalyticProfile} within initialization
-     * of different fields
-     * 
+     * Create a new instance of {@code AnalyticProfile} within initialization of different fields
+     *
      * @param trackId The track id for the Google analytics account
      * @param groups The list of groups
      */
@@ -70,6 +71,7 @@ public class AnalyticProfile implements Serializable {
 
     /**
      * Add the given group to the list of groups
+     *
      * @param group The group name to add to the list
      * @return <tt>True</tt> if the operation finish with success else <tt>False</tt>
      */

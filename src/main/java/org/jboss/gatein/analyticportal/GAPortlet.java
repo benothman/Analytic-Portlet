@@ -42,7 +42,8 @@ import org.jboss.gatein.model.AnalyticProfile;
  *
  * Created on Apr 30, 2010, 1:52:22 PM
  *
- * @author Nabil Benothman (nabil.benothman@gmail.com) & Anne Leticia Mikiela (anne.mikiela@unine.ch)
+ * @author <a href="mailto:nabil.benothman@gmail.com">Nabil Benothman</a> 
+ * @author <a href="mailto:anne.mikiela@unine.ch">Anne Leticia Mikiela</a>
  * @version 1.0
  */
 public class GAPortlet extends GenericPortlet {
@@ -209,7 +210,7 @@ public class GAPortlet extends GenericPortlet {
         prefs.setValue("trackLang", String.valueOf(profile.getLanguage()));
         // Setting the groups variables, stored as list of values
         String[] groups = new String[profile.getGroups().size()];
-        prefs.setValues("groups", (String[]) profile.getGroups().toArray(groups));
+        prefs.setValues("groups", profile.getGroups().toArray(groups));
         // storing preferences
         prefs.store();
     }
