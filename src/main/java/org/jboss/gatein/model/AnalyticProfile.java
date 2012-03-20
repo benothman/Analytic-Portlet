@@ -46,6 +46,7 @@ public class AnalyticProfile implements Serializable {
     private String trackId;
     @NotNull
     private List<String> groups;
+    private String domainName;
     private boolean language;
     private boolean authenticated;
 
@@ -145,5 +146,19 @@ public class AnalyticProfile implements Serializable {
      */
     public void setAuthenticated(boolean authenticated) {
         this.authenticated = authenticated;
+    }
+
+    /**
+     * @return the domainName
+     */
+    public String getDomainName() {
+        return domainName;
+    }
+
+    /**
+     * @param domainName the domainName to set
+     */
+    public void setDomainName(String domainName) {
+        this.domainName = domainName;
     }
 }

@@ -127,8 +127,14 @@ public class GAPortlet extends GenericPortlet {
         if(trackId != null) {
             trackId = trackId.trim();
         }
+        
+        String domainName = request.getParameter("domainName");
+        if(domainName == null) {
+            domainName = "";
+        }
         String lang = request.getParameter("language");
         String auth = request.getParameter("authenticated");
+        
         String groups[] = request.getParameterValues("groups");
         if (groups == null) {
             groups = new String[]{};
@@ -139,6 +145,8 @@ public class GAPortlet extends GenericPortlet {
         AnalyticProfile profile = new AnalyticProfile();
         // Thevalidation of the trackId will be done in the validate method
         profile.setTrackId(trackId);
+        // Setting the domain name
+        profile.setDomainName(domainName);
         // adding groups to profile
         for (String group : groups) {
             profile.addGroup(group);
@@ -207,6 +215,8 @@ public class GAPortlet extends GenericPortlet {
     private void storeProfile(PortletPreferences prefs, AnalyticProfile profile) throws Exception {
         // Setting the trackId
         prefs.setValue("trackId", profile.getTrackId());
+        // Setting the domain name
+        prefs.setValue("trackDomaineName", profile.getDomainName());
         // Setting the authentication variable, stored as boolean value
         prefs.setValue("trackAuth", String.valueOf(profile.isAuthenticated()));
         // Setting the language variable, stored as boolean value

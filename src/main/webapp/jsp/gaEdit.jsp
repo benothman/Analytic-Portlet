@@ -36,6 +36,7 @@
 <%
     PortletPreferences prefs = renderRequest.getPreferences();
     String trackId = prefs.getValue("trackId", "");
+    String domainName = prefs.getValue("trackDomaineName", "");
     String auth = prefs.getValue("trackAuth", "");
     String lang = prefs.getValue("trackLang", "");
     String error = portletSession.getAttribute("error") != null ? (String) portletSession.getAttribute("error") : "";
@@ -73,6 +74,11 @@
                 <td align="left" width="50">&nbsp;</td>
             </tr>
             <tr>
+                <td align="right">Domain Name : </td>
+                <td align="left"><input type="text" value="<%=domainName%>" id="domainName" name="domainName" /></td>
+                <td align="left" width="50">&nbsp;</td>
+            </tr>
+            <tr>
                 <td align="right">Language : </td>
                 <td align="left"><input type="checkbox" value="OK" name="language" <%= "true".equals(lang) ? "checked" : ""%>  /></td>
                 <td align="center">&nbsp;</td>
@@ -85,7 +91,7 @@
             <tr>
                 <td align="right" valign="top">Groups : </td>
                 <td align="left">
-                    <select name="groups" multiple="multiple" size=6>
+                    <select name="groups" multiple="multiple" size=5>
 
                         <%
                             ExoContainer container = ExoContainerContext.getContainerByName("portal");

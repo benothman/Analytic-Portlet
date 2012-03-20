@@ -28,7 +28,8 @@
 
     PortletPreferences prefs = renderRequest.getPreferences();
     String trackId = prefs.getValue("trackId", "");
-
+    String domaineName = prefs.getValue("trackDomaineName", "");
+    
     /*
      * retrieve groups from preferences, to track user groups we compute the intersection between
      * user groups and the list of groups that the administrator hope track
@@ -84,6 +85,15 @@
 
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', '<%=trackId%>']);
+        
+        <%
+            if(!domaineName.matches("\\s*")) {
+        %>
+               _gaq.push(['_setDomainName', '<%=domaineName%>']); 
+        <%  
+            }
+        %>
+        
         _gaq.push(['_trackPageview']);
 
         (function() {
